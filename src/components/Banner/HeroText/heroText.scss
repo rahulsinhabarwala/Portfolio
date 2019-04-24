@@ -1,14 +1,18 @@
 .herotext {
     display: flex;
+    white-space: pre;
     position: absolute;
     font-size: 60px;
     top: 40%;
     margin: 0 auto;
-    left: 20%;
+    left: 10%;
+  
 }
 
 .herosize span {
     font-size: 50px;
+    background-color: black;
+    white-space:pre;
 }
 
 h1 {
@@ -17,10 +21,14 @@ h1 {
 
 .herosize {
     font-size: 60px;
+    will-change: transform;
+    opacity: 0;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 
 .animated {
-    -webkit-animation-duration: .5s;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -32,10 +40,6 @@ h1 {
 .rubberBand {
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
     }
     @-webkit-keyframes rubberBand {
     0% {
@@ -96,4 +100,6 @@ h1 {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
     }
-    } 
+    }
+    
+    
