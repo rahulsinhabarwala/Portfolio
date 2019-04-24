@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-// import './layout.css';
-// import Header from '../../Components/Header/header';
+import './layout.scss';
+
+import Banner from '../../components/Banner/banner'
 // import Fotter from '../../Components/Footer/footer';
 
 class Layout extends Component {
-		
-		
 	render() {
 		return (
-			<div>
-				dfgd
+			<div className='flexcontainer'>
+				Layout
+				<Banner>
+					
+				</Banner>
 			</div>
 		)
 	}
