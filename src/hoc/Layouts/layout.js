@@ -8,7 +8,7 @@ class Layout extends Component {
 	render() {
 		return (
 			<div className='flexcontainer'>
-				Layout
+				
 				<Banner>
 					
 				</Banner>
