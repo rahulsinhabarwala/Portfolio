@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './banner.scss';
+import './banner.scss';
 
 import HeroText from './HeroText/heroText';
 

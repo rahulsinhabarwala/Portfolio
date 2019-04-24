@@ -1,14 +1,14 @@
 .herotext {
     display: flex;
     position: absolute;
-    font-size: 40px;
+    font-size: 60px;
     top: 40%;
     margin: 0 auto;
     left: 20%;
 }
 
 .herosize span {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 h1 {
@@ -16,8 +16,18 @@ h1 {
 }
 
 .herosize {
-    font-size: 40px;
+    font-size: 60px;
 }
+
+.animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: rubberBand;
+    color: #08fdd8;
+}
+
 
 .rubberBand {
     -webkit-animation-name: rubberBand;
