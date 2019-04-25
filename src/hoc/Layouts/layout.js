@@ -7,12 +7,8 @@ import Banner from '../../components/Banner/banner'
 class Layout extends Component {
 	render() {
 		return (
-			<div className='flexcontainer'>
-				
 				<Banner>
-					
 				</Banner>
-			</div>
 		)
 	}
 }

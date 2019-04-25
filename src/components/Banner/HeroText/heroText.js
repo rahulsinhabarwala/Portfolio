@@ -1,43 +1,54 @@
 import React,{Component} from 'react';
-import './heroText.scss'
+import './heroText.scss';
+import '../../animations.scss';
 
 export default class heroText extends Component {
 //const seprateText=[{text:'i'},{text:'m'},{text:'a'},{text:'w'}];
+//x.split("").reduce((i,c)=>{temp={"data":c};i.push(temp);return i;},[]);
 componentDidMount(){
-  const x = document.querySelectorAll('span')
-  let y =0;  
-  x.forEach( e=>{
-    e.style.opacity='0';
+  let allSpan = document.querySelectorAll('.herotext span')
+  let t=0;  
+  allSpan.forEach( item=>{
+    item.style.opacity='0';
     window.setTimeout(()=>{
-      e.style.opacity='1';
-      e.classList.add('animated');
-    },y)
-    y=y+60;
-    e.addEventListener('mouseover',()=>{
-      e.classList.add('animated');
+      item.style.opacity='1';
+      item.classList.add('zoomInDown');
+    },t+=50);
+    item.addEventListener('mouseover',()=>{
+      item.classList.add('animated');
     })
-    e.addEventListener('animationend',()=>{
-      e.classList.remove('animated');
+    item.addEventListener('animationend',()=>{
+      item.classList.remove('animated');
+    })
+    item.addEventListener('animationend',()=>{
+      item.classList.remove('zoomInDown');
     })
   })
 }
 
 render() {
-//const str=['I','_','m','_','a','_','w','e','b','_','d','e','v','l','o','p','e','r'];
-let string="Hi, I am a web developer";
+//let maintext=['I','\n','m','<br>','a','_','w','e','b','_','d','e','v','l','o','p','e','r'];
+let string="Hi, I’m John,web developer.";
 let maintext= string.split("");
+console.log(maintext)
 const showItem = () =>{
   return maintext.map((item,i)=>{
-    return(
-      <span key={i} className='herosize'>
-        {item}
-      </span>
-    )
+    if(i!==3 && i!==12){
+      return(
+        <span key={i} className='herosize'>{item}</span>
+      )}
+    else{
+      return(
+        <>
+        <span key={i} className='herosize'>{item}</span><br />
+        </>
+      )}
   })
 }
+
   return (
     <div className='herotext'>
-        {showItem()}
+          {showItem()}
     </div>
   )
 }
