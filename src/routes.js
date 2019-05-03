@@ -10,9 +10,9 @@ class routes extends Component {
   render() {
     return (
         <Layout>
-            <Switch>
+            {/* <Switch>
               <Route path='/' exact component={Home}></Route>
-            </Switch>  
+            </Switch>   */}
         </Layout>      
     )
   }

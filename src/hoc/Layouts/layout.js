@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './layout.scss';
 
 import Banner from '../../components/Banner/banner'

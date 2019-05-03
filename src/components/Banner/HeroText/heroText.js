@@ -12,7 +12,7 @@ componentDidMount(){
     item.style.opacity='0';
     window.setTimeout(()=>{
       item.style.opacity='1';
-      item.classList.add('zoomInDown');
+      item.classList.add('bounceIn');
     },t+=50);
     item.addEventListener('mouseover',()=>{
       item.classList.add('animated');
@@ -21,7 +21,7 @@ componentDidMount(){
       item.classList.remove('animated');
     })
     item.addEventListener('animationend',()=>{
-      item.classList.remove('zoomInDown');
+      item.classList.remove('bounceIn');
     })
   })
 }
@@ -45,7 +45,6 @@ const showItem = () =>{
       )}
   })
 }
-
   return (
     <div className='herotext'>
           {showItem()}

@@ -2,26 +2,29 @@
     display: flex;
     white-space: pre;
     position: absolute;
+    flex-wrap: wrap;
+    
     top: 20%;
     left: 10%;
 
     align-content: space-between;
     justify-content: space-between;
-    // .herosize{
-       
-    // }
-
-    // h1 {
-    //     display: inline-block;
-    //     color: #fff;
-    //     font-size: 56px;
-    //     line-height: 53px;
-    //     margin: 0;
-    //     font-weight: 400;
+    h1{
+       // display: block;
+    }
         span {
             white-space: pre;
             font-size: 60px;
             will-change: transform;
             opacity: 0;
+            // &:hover{
+            //     animation-name:rubberBand;
+            // }
+            // .herosize{
+
+            // }
+            &.width{
+                //min-width: 100% !important;
+            }
     }
 }
