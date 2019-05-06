@@ -8,8 +8,10 @@ import Banner from '../../components/Banner/banner'
 class Layout extends Component {
 	render() {
 		return (
+			<div className='container-fluid'>
 				<Banner>
 				</Banner>
+			</div>
 		)
 	}
 }
