@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import NavBar from '../../components/Banner/NavBar/navbar';
 import './layout.scss';
 
 import Banner from '../../components/Banner/banner'
@@ -8,10 +8,10 @@ import Banner from '../../components/Banner/banner'
 class Layout extends Component {
 	render() {
 		return (
-			<div className='container-fluid'>
-				<Banner>
-				</Banner>
-			</div>
+				<div className='container-fluid'>
+					<NavBar/>
+					<Banner/>
+				</div>
 		)
 	}
 }
