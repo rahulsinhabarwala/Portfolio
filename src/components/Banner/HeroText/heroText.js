@@ -32,16 +32,16 @@ export default class heroText extends Component {
         console.log(maintext)
         const showItem = () =>{
           return maintext.map((item,i)=>{
-            
-          if(i===22){
-                return(
-                  <span key={i} className='herosize O'>{item}</span>
-                )}
-                else if(i>22){
-                  return(
-                    <span key={i} className='herosize black'>{item}</span>
-                  )}
-          else if(i!==3 && i!==12){
+             if(i===8){
+               return(
+                 <span key={i} className='herosize black'>{item}</span>
+               )}
+              // else if(i>22){
+              //   return(
+              //     <span key={i} className='herosize black'>{item}</span>
+              //   )}
+         else   
+          if(i!==3 && i!==12){
                   return(
                     <span key={i} className='herosize'>{item}</span>
                   )}

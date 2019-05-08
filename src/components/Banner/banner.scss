@@ -4,5 +4,13 @@
 // }
 .bg{
     height: 100vh;
-    background: linear-gradient(-54deg, #eee 61%, #212531 61%)
+   // background: linear-gradient(-54deg, #eee 61%, #212531 61%)
+}
+.tags{
+    position: relative;
+    top: 31px;
+    left: 11px;
+    color: #515152;
+    font-size: 18px;
+    font-family: 'La Belle Aurore',cursive;
 }

@@ -1,21 +1,21 @@
-// span:before{
-//     // content:" "; 
-//     // display:inline-block; 
-//     // width:32px;
-// }
- h1{
+
+h1{
    white-space: pre-wrap;
    font-size: 30px;
    margin-top: 10%;
    margin-left: 20%;
+  
    span{
-    // background: -webkit-linear-gradient(#eee, #333);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    &.black{
-      color:black;
-    }
-   }
+    //  background: -webkit-linear-gradient(23deg,#4d4d4e, #000);
+    //  -webkit-background-clip: text;
+    //  -webkit-text-fill-color: transparent;
+    
+    //  &.black{
+    //   background: -webkit-linear-gradient(123deg,#333,#eee);
+    //  -webkit-background-clip: text;
+    //  -webkit-text-fill-color: transparent;
+    // }
+  }
    
 }
 .O{
