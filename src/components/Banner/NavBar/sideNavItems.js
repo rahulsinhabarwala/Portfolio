@@ -4,20 +4,34 @@ import './sideNavItems.scss'
 import FontAwesome from 'react-fontawesome';
 
 export default function sideNavItems() {
+
+  const items =[{
+        icon:'fas fa-home'
+  },{
+    icon:'far fa-user'
+    
+  },{
+    icon:'fas fa-cogs'
+    
+  },{
+    icon:'far fa-eye'
+  }
+]
+
+const showItems=()=>{
+  return items.map((item,i)=>{
+   return(
+      <a className="nav_anchor">
+        <FontAwesome name={item.icon} key={i}>
+        </FontAwesome>
+      </a>
+   )
+  })
+}
+
   return (
-    <nav className="cool">
-    {/* <Link to="/"> */}
-      <FontAwesome name="fas fa-home">
-
-      </FontAwesome>
-      <FontAwesome name="fas fa-home">
-
-</FontAwesome>
-<FontAwesome name="fas fa-home">
-
-</FontAwesome>
-    {/* </Link> */}
-         
+    <nav className="navItems">
+    {showItems()}
     </nav>
   )
 }

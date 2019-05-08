@@ -8,7 +8,9 @@
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-in-out;
   animation-name: rubberBand;
-  color: #08fdd8;
+  color: #08fdd8 !important;
+ // background:linear-gradient(#ed8, #da7)
+ -webkit-text-fill-color: unset;
 }
 .rubberBand {
   -webkit-animation-name: rubberBand;

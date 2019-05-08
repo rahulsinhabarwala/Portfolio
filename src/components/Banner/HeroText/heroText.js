@@ -6,7 +6,7 @@ export default class heroText extends Component {
     
   
   componentDidMount(){
-        let allSpan = document.querySelectorAll('span')
+        let allSpan = document.querySelectorAll('.herotext span')
         let t=0;  
         allSpan.forEach( item=>{
           item.style.opacity='0';
@@ -32,11 +32,20 @@ export default class heroText extends Component {
         console.log(maintext)
         const showItem = () =>{
           return maintext.map((item,i)=>{
-            if(i!==3 && i!==12){
-              return(
-                <span key={i} className='herosize'>{item}</span>
-              )}
-            else{
+            
+          if(i===22){
+                return(
+                  <span key={i} className='herosize O'>{item}</span>
+                )}
+                else if(i>22){
+                  return(
+                    <span key={i} className='herosize black'>{item}</span>
+                  )}
+          else if(i!==3 && i!==12){
+                  return(
+                    <span key={i} className='herosize'>{item}</span>
+                  )}
+           else{
               return(
                 <><span key={i} className='herosize'>{item}</span><br/>
                 </>
@@ -44,9 +53,12 @@ export default class heroText extends Component {
           })
         }
         return (
-         <h1> 
-            {showItem()}
-          </h1>      
+          <div  className="herotext">
+            <h1> 
+              {showItem()}
+            </h1> 
+          </div>
+              
         )
       }
 }

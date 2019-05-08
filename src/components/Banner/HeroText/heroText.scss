@@ -6,4 +6,21 @@
  h1{
    white-space: pre-wrap;
    font-size: 30px;
+   margin-top: 10%;
+   margin-left: 20%;
+   span{
+    // background: -webkit-linear-gradient(#eee, #333);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    &.black{
+      color:black;
+    }
+   }
+   
 }
+.O{
+  background: -webkit-linear-gradient(-217deg, #21252E 41%, #eee 33%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ 

@@ -5,8 +5,8 @@ import './banner.scss';
 export default class banner extends Component {
   render() {
     return (
-          <div className="row">
-            <Herotext className="herotext"/>
+          <div className="row bg">
+            <Herotext/>
         </div>
     )
   }
