@@ -1,26 +1,61 @@
-
-h1{
-   white-space: pre-wrap;
-   font-size: 30px;
-   margin-top: 10%;
-   margin-left: 20%;
-  
-   span{
-    //  background: -webkit-linear-gradient(23deg,#4d4d4e, #000);
-    //  -webkit-background-clip: text;
-    //  -webkit-text-fill-color: transparent;
-    
-    //  &.black{
-    //   background: -webkit-linear-gradient(123deg,#333,#eee);
-    //  -webkit-background-clip: text;
-    //  -webkit-text-fill-color: transparent;
-    // }
-  }
-   
+.herotext {
+  margin-top: 10%;
+  margin-left: 20%;
 }
-.O{
-  background: -webkit-linear-gradient(-217deg, #21252E 41%, #eee 33%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
- }
- 
+
+h1 {
+  white-space: pre-wrap;
+  font-size: 30px;
+
+  &::before {
+    content: '{';
+    font-size: 48px;
+    font-weight: 600;
+    opacity: 1;
+    color: aqua;
+    position: absolute;
+    margin: -2.5%;
+    size: 30px;
+    -webkit-animation: myanim2 .5s 1s backwards;
+    animation: myanim2 .5s 1s backwards;
+  }
+
+  &::after {
+    content: '}';
+    font-size: 48px;
+    font-weight: 600;
+    opacity: 1;
+    color: aqua;
+    position: absolute;
+    margin: 1.5%;
+    size: 30px;
+    -webkit-animation: myanim2 1s 1.2s backwards;
+    animation: myanim2 1s 1.2s backwards;
+  }
+}
+
+h2 {
+  color: #8d8d8d;
+  margin-top: 9px;
+  font-weight: 400;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  -webkit-animation: myanim2 1s 1.2s backwards;
+  animation: myanim2 1s 1.2s backwards;
+}
+
+// .O {
+//   background: -webkit-linear-gradient(-217deg, #21252E 41%, #eee 33%);
+//   //-webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
+//  span{
+//    background: -webkit-linear-gradient(23deg,#4d4d4e, #000);
+//    -webkit-background-clip: text;
+//    -webkit-text-fill-color: transparent;
+//    &.black{
+//     background: -webkit-linear-gradient(123deg,#333,#eee);
+//    -webkit-background-clip: text;
+//    -webkit-text-fill-color: transparent;
+// }}

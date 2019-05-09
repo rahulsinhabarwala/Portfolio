@@ -1,16 +1,39 @@
-// .herotext{
-    
-//     font-size: 50px;
-// }
 .bg{
-    height: 100vh;
+    height: 101vh;
    // background: linear-gradient(-54deg, #eee 61%, #212531 61%)
 }
 .tags{
     position: relative;
-    top: 31px;
-    left: 11px;
     color: #515152;
     font-size: 18px;
     font-family: 'La Belle Aurore',cursive;
+    &.top-tags{
+        left: 11px;
+        top: 31px;
+    }
+    &.bottom-tags{
+        position: absolute;
+        bottom: 5%;
+        left: 2%;
+    }
 }
+
+@keyframes myanim2 {
+    0% {
+        opacity: 0
+    }
+  
+    100% {
+        opacity: 1
+    }
+  }
+  
+  @-webkit-keyframes myanim2 {
+    0% {
+        opacity: 0
+    }
+  
+    100% {
+        opacity: 1
+    }
+  }

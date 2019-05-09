@@ -15,7 +15,7 @@ export default function socialMediaIcons() {
 const showItems=()=>{
   return items.map((item,i)=>{
    return(
-      <li><a href="/" target="_blank"><i class={item.icon}></i></a></li>
+      <li key={i}><a href="/" target="_blank"><i className={item.icon}></i></a></li>
    )
   })
 }

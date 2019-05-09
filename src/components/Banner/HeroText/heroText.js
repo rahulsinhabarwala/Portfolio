@@ -3,9 +3,39 @@ import './heroText.scss';
 import '../../../animations.scss';
 
 export default class heroText extends Component {
-    
-  
+    state={
+      str:'Hi, I’m John,web developer.'
+    }
   componentDidMount(){
+        let allSpan = document.querySelectorAll('.herotext span')
+        let t=0;  
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+        allSpan.forEach( item=>{
+          item.style.opacity='0';
+          window.setTimeout(()=>{
+            item.style.opacity='1';
+            item.classList.add('bounceIn');
+          },t+=50);
+          item.addEventListener('mouseover',()=>{
+            item.classList.add('animated');
+          })
+          item.addEventListener('animationend',()=>{
+            item.classList.remove('animated');
+          })
+          item.addEventListener('animationend',()=>{
+            item.classList.remove('bounceIn');
+          })
+        })
+       
+      }
+      componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll.bind(this));
+      }
+      
+      handleScroll(e) {
+         this.setState({
+           str:'Hi, I’m John,web developer.'
+         })
         let allSpan = document.querySelectorAll('.herotext span')
         let t=0;  
         allSpan.forEach( item=>{
@@ -25,40 +55,27 @@ export default class heroText extends Component {
           })
         })
       }
-      
       render() {
-        let string="Hi, I’m John,web developer.";
+        let string= this.state.str ;
         let maintext= string.split("");
-        console.log(maintext)
         const showItem = () =>{
           return maintext.map((item,i)=>{
              if(i===8){
                return(
                  <span key={i} className='herosize black'>{item}</span>
                )}
-              // else if(i>22){
-              //   return(
-              //     <span key={i} className='herosize black'>{item}</span>
-              //   )}
-         else   
-          if(i!==3 && i!==12){
+               else if(i!==3 && i!==12){
                   return(
                     <span key={i} className='herosize'>{item}</span>
                   )}
-           else{
-              return(
-                <><span key={i} className='herosize'>{item}</span><br/>
-                </>
-              )}
-          })
-        }
+                else{return(<><span key={i} className='herosize'>{item}</span><br/></>)}})
+              }
         return (
           <div  className="herotext">
-            <h1> 
-              {showItem()}
-            </h1> 
+          <span className=""></span>
+            <h1>{showItem()}</h1> 
+            <h2>Front End Developer / React.js / Sass </h2>
           </div>
-              
         )
-      }
+    }
 }

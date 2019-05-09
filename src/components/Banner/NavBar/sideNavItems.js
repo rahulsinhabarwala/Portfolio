@@ -21,7 +21,7 @@ export default function sideNavItems() {
 const showItems=()=>{
   return items.map((item,i)=>{
    return(
-      <a className="nav_anchor">
+      <a key={i} className="nav_anchor">
         <FontAwesome name={item.icon} key={i}>
         </FontAwesome>
       </a>
