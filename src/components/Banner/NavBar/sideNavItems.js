@@ -1,37 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
 import './sideNavItems.scss'
 import FontAwesome from 'react-fontawesome';
 
-export default function sideNavItems() {
+export default class bannsideNavItems extends Component{
 
-  const items =[{
-        icon:'fas fa-home'
-  },{
-    icon:'far fa-user'
-    
-  },{
-    icon:'fas fa-cogs'
-    
-  },{
-    icon:'far fa-eye'
-  }
-]
+      items=[{
+        icon:'fas fa-home',
+        active:true,
+        value:'home',
+      },
+        {
+        icon:'far fa-user',
+        active:false,
+        value:'about'},
+        {
+        icon:'fas fa-cogs',
+        active:false,
+        value:'skills'},
+        {
+        icon:'far fa-eye',
+        active:false,
+        value:'my_work'}]
 
-const showItems=()=>{
-  return items.map((item,i)=>{
-   return(
-      <a key={i} className="nav_anchor">
-        <FontAwesome name={item.icon} key={i}>
-        </FontAwesome>
-      </a>
-   )
+handleClick = (event) => {
+  let getactive = document.querySelectorAll('.navItems a')
+  getactive.forEach( item=>{
+    item.classList.remove("active");
   })
+  event.target.classList.add('active');
 }
 
+render(){
+    let showItems=()=>{
+    return this.items.map((item,i)=>{
+     return(
+        <a href='javascript:void(0)' key={i} className={`nav_anchor ${item.active?"active":''}`}
+        onClick={this.handleClick.bind(this)}
+        value={item.value}
+        >
+          <FontAwesome name={item.icon} key={i}>
+          </FontAwesome>
+        </a>
+        )
+    })
+  } 
   return (
     <nav className="navItems">
     {showItems()}
     </nav>
-  )
+    )
+  }
 }
+ 

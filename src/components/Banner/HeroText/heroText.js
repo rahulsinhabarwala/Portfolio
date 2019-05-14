@@ -9,35 +9,7 @@ export default class heroText extends Component {
   componentDidMount(){
         let allSpan = document.querySelectorAll('.herotext span')
         let t=0;  
-        window.addEventListener('scroll', this.handleScroll.bind(this));
-        allSpan.forEach( item=>{
-          item.style.opacity='0';
-          window.setTimeout(()=>{
-            item.style.opacity='1';
-            item.classList.add('bounceIn');
-          },t+=50);
-          item.addEventListener('mouseover',()=>{
-            item.classList.add('animated');
-          })
-          item.addEventListener('animationend',()=>{
-            item.classList.remove('animated');
-          })
-          item.addEventListener('animationend',()=>{
-            item.classList.remove('bounceIn');
-          })
-        })
-       
-      }
-      componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll.bind(this));
-      }
-      
-      handleScroll(e) {
-         this.setState({
-           str:'Hi, I’m John,web developer.'
-         })
-        let allSpan = document.querySelectorAll('.herotext span')
-        let t=0;  
+       // window.addEventListener('scroll', this.handleScroll.bind(this));
         allSpan.forEach( item=>{
           item.style.opacity='0';
           window.setTimeout(()=>{
@@ -55,7 +27,9 @@ export default class heroText extends Component {
           })
         })
       }
-      render() {
+     
+      render(props) {
+        
         let string= this.state.str ;
         let maintext= string.split("");
         const showItem = () =>{
@@ -79,3 +53,30 @@ export default class heroText extends Component {
         )
     }
 }
+ // componentWillUnmount() {
+      //   window.removeEventListener('scroll', this.handleScroll.bind(this));
+      // }
+      
+      // handleScroll(e) {
+      //    this.setState({
+      //      str:'Hi, I’m John,web developer.'
+      //    })
+      //   let allSpan = document.querySelectorAll('.herotext span')
+      //   let t=0;  
+      //   allSpan.forEach( item=>{
+      //     item.style.opacity='0';
+      //     window.setTimeout(()=>{
+      //       item.style.opacity='1';
+      //       item.classList.add('bounceIn');
+      //     },t+=50);
+      //     item.addEventListener('mouseover',()=>{
+      //       item.classList.add('animated');
+      //     })
+      //     item.addEventListener('animationend',()=>{
+      //       item.classList.remove('animated');
+      //     })
+      //     item.addEventListener('animationend',()=>{
+      //       item.classList.remove('bounceIn');
+      //     })
+      //   })
+      // }

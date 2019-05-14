@@ -10,7 +10,8 @@ class Layout extends Component {
 		return (
 				<div className='container-fluid'>
 					<NavBar/>
-					<Banner/>
+						<Banner>
+					</Banner>
 				</div>
 		)
 	}
