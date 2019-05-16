@@ -3,9 +3,7 @@ import './heroText.scss';
 import '../../../animations.scss';
 
 export default class heroText extends Component {
-    state={
-      str:'Hi, I’m John,web developer.'
-    }
+ 
   componentDidMount(){
         let allSpan = document.querySelectorAll('.herotext span')
         let t=0;  
@@ -27,10 +25,8 @@ export default class heroText extends Component {
           })
         })
       }
-     
-      render(props) {
-        
-        let string= this.state.str ;
+      render() {
+        let string= this.props.text.text.str;
         let maintext= string.split("");
         const showItem = () =>{
           return maintext.map((item,i)=>{

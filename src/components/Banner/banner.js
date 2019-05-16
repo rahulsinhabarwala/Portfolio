@@ -6,7 +6,7 @@ export default class banner extends Component {
     return (
           <div className="row bg">         
           <span className="tags top-tags">&lt;html&gt;<br/>&nbsp;&nbsp; &lt;body&gt; </span>
-            <Herotext/>
+            <Herotext text={this.props}/>
             <span className="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br/> &lt;/html&gt; </span>
         </div>
     )
