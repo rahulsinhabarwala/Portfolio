@@ -10,14 +10,21 @@ class Layout extends Component {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
 	  }
-	  handleClick() {
-		console.log('Click happened');
-	  }
-	state={
-		str:'Hi, I’m John,web developer.'
+	  handleClick(event) {
+		console.log(event)
+		this.setState({
+			str:"dasdffas"
+		})
+		//let getactive = document.querySelectorAll('.navItems a')
+		//   getactive.forEach( item=>{
+		//     item.classList.remove("active");
+		//   })
+		//   event.target.classList.add('active');
 	  }
 
-	 
+	state={
+		str:'Hi,-I’m John,-web developer.'
+	  }
 	  
 	render() {
 		return (
