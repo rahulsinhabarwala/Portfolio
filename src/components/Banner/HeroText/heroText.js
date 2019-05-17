@@ -5,30 +5,53 @@ import '../../../animations.scss';
 export default class heroText extends Component {
  
   componentDidMount(){
-        let allSpan = document.querySelectorAll('.herotext span')
-        let t=0;  
-       // window.addEventListener('scroll', this.handleScroll.bind(this));
-        allSpan.forEach( item=>{
-          item.style.opacity='0';
-          window.setTimeout(()=>{
-            item.style.opacity='1';
-            item.classList.add('bounceIn');
-          },t+=50);
-          item.addEventListener('mouseover',()=>{
-            item.classList.add('animated');
-          })
-          item.addEventListener('animationend',()=>{
-            item.classList.remove('animated');
-          })
-          item.addEventListener('animationend',()=>{
-            item.classList.remove('bounceIn');
-          })
-        })
+    let allSpan = document.querySelectorAll('.herotext span')
+    let t=0;  
+   // window.addEventListener('scroll', this.handleScroll.bind(this));
+    allSpan.forEach( item=>{
+      item.style.opacity='0';
+      window.setTimeout(()=>{
+        item.style.opacity='1';
+        item.classList.add('bounceIn');
+      },t+=50);
+      item.addEventListener('mouseover',()=>{
+        item.classList.add('animated');
+      })
+      item.addEventListener('animationend',()=>{
+        item.classList.remove('animated');
+      })
+      item.addEventListener('animationend',()=>{
+        item.classList.remove('bounceIn');
+      })
+    })
       }
+     
+    componentDidUpdate(){
+      let allSpan = document.querySelectorAll('.herotext span')
+      let t=0;  
+     // window.addEventListener('scroll', this.handleScroll.bind(this));
+      allSpan.forEach( item=>{
+        item.style.opacity='0';
+        window.setTimeout(()=>{
+          item.style.opacity='1';
+          item.classList.add('bounceIn');
+        },t+=50);
+        item.addEventListener('mouseover',()=>{
+          item.classList.add('animated');
+        })
+        item.addEventListener('animationend',()=>{
+          item.classList.remove('animated');
+        })
+        item.addEventListener('animationend',()=>{
+          item.classList.remove('bounceIn');
+        })
+      })
+    }  
       render() {
         let string= this.props.text.text.str;
         let maintext= string.split("");
         console.log(maintext)
+        
         const showItem = () =>{
           return maintext.map((item,i)=>{
              if(item==="-"){
@@ -41,6 +64,8 @@ export default class heroText extends Component {
                   )}
                 )
               }
+
+
         return (
           <div  className="herotext">
           <span className=""></span>

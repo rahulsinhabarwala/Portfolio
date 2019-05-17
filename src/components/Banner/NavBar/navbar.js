@@ -8,7 +8,6 @@ export default class navbar extends Component {
     
     return (
         <div className="sideBar" id="nav_bar">
-        
           <SideNavItems handleClick={this.props}/>
           <SocialMediaIcons/>
         </div>

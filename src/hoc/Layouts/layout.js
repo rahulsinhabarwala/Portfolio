@@ -11,10 +11,10 @@ class Layout extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	  }
 	  handleClick(event) {
-		console.log(event)
 		this.setState({
-			str:"dasdffas"
+			str:"dasdffargrtw-ergtwerwgt-rgwsfsfdefdsfsd"
 		})
+	
 		//let getactive = document.querySelectorAll('.navItems a')
 		//   getactive.forEach( item=>{
 		//     item.classList.remove("active");
