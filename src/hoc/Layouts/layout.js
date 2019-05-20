@@ -11,9 +11,28 @@ class Layout extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	  }
 	  handleClick(event) {
-		this.setState({
-			str:"dasdffargrtw-ergtwerwgt-rgwsfsfdefdsfsd"
-		})
+			console.log(event.target.id)
+			if(event.target.id === "0"){
+				this.setState({
+					str:'Hi,-I’m John,-web developer.'
+				})
+			}
+			else if(event.target.id==="1"){
+				this.setState({
+					str:'about,-I’m John,-web developer.'
+				})
+			}
+			else if(event.target.id==="2"){
+				this.setState({
+					str:'skills,-I’m John,-web developer.'
+				})
+			}
+			else{
+				this.setState({
+					str:'mywork,-I’m John,-web developer.'
+				})
+			}
+		
 	
 		//let getactive = document.querySelectorAll('.navItems a')
 		//   getactive.forEach( item=>{

@@ -50,8 +50,6 @@ export default class heroText extends Component {
       render() {
         let string= this.props.text.text.str;
         let maintext= string.split("");
-        console.log(maintext)
-        
         const showItem = () =>{
           return maintext.map((item,i)=>{
              if(item==="-"){

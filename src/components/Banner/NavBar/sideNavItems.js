@@ -7,7 +7,8 @@ export default class bannsideNavItems extends Component{
       items=[{
         icon:'fas fa-home',
         active:true,
-        value:'home',},
+        value:'home',
+      },
         {
         icon:'far fa-user',
         active:false,
@@ -35,7 +36,7 @@ render(){
     let showItems=()=>{
     return this.items.map((item,i)=>{
      return(
-        <a href='javascript:void(0)' key={i} className={`nav_anchor ${item.active?"active":''}`}
+        <a href='javascript:void(0)' key={i} id={i} className={`nav_anchor ${item.active?"active":''}`}
         onClick={this.props.handleClick.handleClick}
         value={item.value}
         >
