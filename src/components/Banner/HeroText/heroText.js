@@ -29,7 +29,7 @@ export default class heroText extends Component {
     componentDidUpdate(){
       let allSpan = document.querySelectorAll('.herotext span')
       let t=0;  
-     // window.addEventListener('scroll', this.handleScroll.bind(this));
+     // window.addEventListener('scroll', this.handleScroll.bind(this))
       allSpan.forEach( item=>{
         item.style.opacity='0';
         window.setTimeout(()=>{
