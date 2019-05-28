@@ -1,12 +1,15 @@
 .herotext {
+  
   margin-top: 10%;
   margin-left: 20%;
 }
-
+.red{
+  margin: 0px;
+  color: #8d8d8d;
+}
 h1 {
   white-space: pre-wrap;
   font-size: 30px;
-
   &::before {
     content: '{';
     font-size: 48px;
@@ -14,27 +17,14 @@ h1 {
     opacity: 1;
     color: aqua;
     position: absolute;
-    margin: -2.5%;
+    margin-left: -3%;
+    margin-top: -.5%;
     size: 30px;
     -webkit-animation: myanim2 .5s 1s backwards;
     animation: myanim2 .5s 1s backwards;
+    }
   }
-
-  &::after {
-    content: '}';
-    font-size: 48px;
-    font-weight: 600;
-    opacity: 1;
-    color: aqua;
-    position: absolute;
-    margin: 1.5%;
-    size: 30px;
-    -webkit-animation: myanim2 1s 1.2s backwards;
-    animation: myanim2 1s 1.2s backwards;
-  }
-}
-
-h2 {
+h3 {
   color: #8d8d8d;
   margin-top: 9px;
   font-weight: 400;
@@ -44,7 +34,22 @@ h2 {
   -webkit-animation: myanim2 1s 1.2s backwards;
   animation: myanim2 1s 1.2s backwards;
 }
-
+h2{
+  white-space: pre-wrap;
+  &::after {
+    content: '}';
+    font-size: 48px;
+    font-weight: 600;
+    opacity: 1;
+    color: aqua;
+    position: absolute;
+    margin-right: 2.5%;
+    margin-left: .5%;
+    size: 30px;
+    -webkit-animation: myanim2 1s 1.2s backwards;
+    animation: myanim2 1s 1.2s backwards;
+  }
+}
 // .O {
 //   background: -webkit-linear-gradient(-217deg, #21252E 41%, #eee 33%);
 //   //-webkit-background-clip: text;

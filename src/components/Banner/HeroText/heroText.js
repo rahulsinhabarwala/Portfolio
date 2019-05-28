@@ -22,7 +22,6 @@ export default class heroText extends Component {
         })
       })
       }
-     
     componentDidUpdate(){
       let allSpan = document.querySelectorAll('.herotext span')
       let t=0;  
@@ -44,27 +43,34 @@ export default class heroText extends Component {
       })
     }  
       render() {
-        let string= this.props.text.text.str;
-        let maintext= string.split("");
+        let key= this.props.text.text.key;
+        let value= this.props.text.text.value;
+        let key1 = key.split("");
+        let value1 = value.split("");
+        const showTitle=()=>{
+          return key1.map((item,i)=>{ 
+            return(
+              <span key={i} className='herosize red'>{item}</span>
+            )
+        }) 
+        }
         const showItem = () =>{
-          return maintext.map((item,i)=>{
-             if(item==="-"){
+          return value1.map((item,i)=>{  
+            if(item==="-"){
              // maintext.splice(i, 1);
               return(<br/>)
               }
                else
                   return(
                     <span key={i} className='herosize'>{item}</span>
-                  )}
-                )
+                  )
+                })
               }
-
-
         return (
           <div  className="herotext">
-          <span className=""></span>
-            <h1>{showItem()}</h1> 
-            <h2>Front End Developer / React.js / Sass </h2>
+            <h1>{showTitle()}</h1>
+            <h2>{showItem()}</h2> 
+            <h3>Front End Developer / React.js / Sass </h3>
           </div>
         )
     }

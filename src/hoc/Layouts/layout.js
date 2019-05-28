@@ -9,11 +9,10 @@ class Layout extends Component {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
 		}
-	
 	  handleClick(event) {
-			console.log('scrol')
-			let getactive = document.querySelectorAll('.navItems a')
-		  getactive.forEach( item=>{
+		console.log(event.type)
+		let getactive = document.querySelectorAll('.navItems a')
+		getactive.forEach( item=>{
 		    item.classList.remove('active');
 		  })
 		  event.target.classList.add('active');
@@ -21,36 +20,43 @@ class Layout extends Component {
 			switch(event.target.id) {
 				case '0':
 					return this.setState({
-						str:'Hi,-I’m John,-web developer.'
+						key:'Me:',
+						value:'Hi,-I’m John,-web developer.'
 					});
 				case '1':
 					return this.setState({
-						str:'About,-I’m John,-web developer.'
+						key:'Skills:',
+						value:'Hi,-I’m John,-web developer.'
 					});
 				case '2':
 					return this.setState({
-						str:'Skills,-I’m John,-web developer.'
+						key:'About:',
+						value:'Hi,-I’m John,-web developer.'
 					});
 					case '3':
 					return this.setState({
-						str:'Mywork,-I’m John,-web developer.'
+						key:'MyWork:',
+						value:'Hi,-I’m John,-web developer.'
 					});
 				default:
 					return this.setState({
-						str:'Hi,-I’m John,-web developer.'
+						key:'Me:',
+						value:'Hi,-I’m John,-web developer.' 
 				});
 			}
 		
 	  }
 
 	state={
-		str:'Hi,-I’m John,-web developer.'
+		key:'Me :',
+		value:'Hi,-I’m John,-web developer.'
 		}
-		
+	
 	render() {
 		return (
 				<div className='container-fluid'
-				onWheel={this.handleClick}>
+				onWheel={this.handleClick}
+				>
 					<NavBar handleClick={this.handleClick}/>
 					<Banner text={this.state} />
 				</div>
