@@ -51,7 +51,7 @@ export default class heroText extends Component {
           return key1.map((item,i)=>{ 
             return(
               <span key={i} className='herosize red'>{item}</span>
-            )
+          )
         }) 
         }
         const showItem = () =>{
