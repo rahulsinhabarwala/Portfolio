@@ -1,15 +1,18 @@
 .herotext {
-  
-  margin-top: 10%;
-  margin-left: 20%;
+  margin-top: 8%;
+  margin-left: 11%;
+
 }
-.red{
+
+.red {
   margin: 0px;
   color: #8d8d8d;
 }
+
 h1 {
   white-space: pre-wrap;
   font-size: 30px;
+
   &::before {
     content: '{';
     font-size: 48px;
@@ -22,8 +25,9 @@ h1 {
     size: 30px;
     -webkit-animation: myanim2 .5s 1s backwards;
     animation: myanim2 .5s 1s backwards;
-    }
   }
+}
+
 h3 {
   color: #8d8d8d;
   margin-top: 9px;
@@ -34,8 +38,10 @@ h3 {
   -webkit-animation: myanim2 1s 1.2s backwards;
   animation: myanim2 1s 1.2s backwards;
 }
-h2{
+
+h2 {
   white-space: pre-wrap;
+
   &::after {
     content: '}';
     font-size: 48px;
@@ -50,6 +56,7 @@ h2{
     animation: myanim2 1s 1.2s backwards;
   }
 }
+
 // .O {
 //   background: -webkit-linear-gradient(-217deg, #21252E 41%, #eee 33%);
 //   //-webkit-background-clip: text;
