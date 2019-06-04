@@ -11,16 +11,17 @@ class Layout extends Component {
 		}
 		
 	  handleClick(event) {
+		  //active class change
 		let getactive = document.querySelectorAll('.navItems a')
 		getactive.forEach( item=>{
 		    item.classList.remove('active');
 		  })
 		  event.target.classList.add('active');
+		  //state change
 		  let id =  parseInt(event.target.id,);
 		  this.statechanger(id);		
 	  }
 	  statechanger(active){
-		console.log(active);
 		switch(active) {
 			case 0:
 				return this.setState({
@@ -63,6 +64,13 @@ class Layout extends Component {
 		WheelReact.config({
 			up: () => {
 			let active = this.state.id+1;
+			
+			let getactive = document.querySelectorAll('.navItems a')
+			getactive.forEach( item=>{
+				console.log(getactive)
+			})
+			//event.target.classList.add('active');
+		  
 			this.statechanger(active);	
 			},
 			down: () => {
